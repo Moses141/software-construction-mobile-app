@@ -1,11 +1,15 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import authRoutes from './routes/auth.routes';
 
 const app = express();
 
 // Middleware
 app.use(cors()); // Allow cross-origin requests (useful if testing from web browser too)
 app.use(express.json()); // Parse JSON bodies (Critical for Mobile APIs)
+
+// Mount Routes
+app.use('/auth', authRoutes);
 
 // Health Check Endpoint
 app.get('/health', (req: Request, res: Response) => {
@@ -19,7 +23,10 @@ app.get('/', (req: Request, res: Response) => {
         version: '1.0.0',
         endpoints: {
             health: '/health',
-            // Auth endpoints will go here
+            auth: {
+                register: '/auth/register',
+                login: '/auth/login'
+            }
         }
     });
 });
