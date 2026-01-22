@@ -1,7 +1,13 @@
 ﻿# Software Construction Assignment 1: Behind the App
 
 **App Selected**: Instagram  
-**Group**: 5 Members  
+**Group Members**:
+*   **Coordinator**: Asingura Philip
+*   **App Analyst**: Mokili Promise Pierre
+*   **System Thinker**: Geno Owor Joshua
+*   **Risk and Change Analyst**: Nkangi Moses
+*   **Documentation Lead**: Kasingye Leone
+  
 
 ## 1. Introduction
 This document provides an engineering analysis of **Instagram**, a widely used social networking service. We move beyond the user experience to understand the architectural, design, and maintenance decisions that allow the platform to serve billions of users globally.
