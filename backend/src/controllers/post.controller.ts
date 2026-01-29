@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { Request, Response } from 'express';
 import { dbService } from '../db/database';
 import { AuthRequest } from '../middleware/auth.middleware';
 import { Post } from '../models/post.model';
@@ -34,7 +34,7 @@ export class PostController {
         });
     }
 
-    static getFeed(req: AuthRequest, res: Response): void {
+    static getFeed(req: Request, res: Response): void {
         const db = dbService.getDb();
         // Join with users to get the author's username
         const sql = `
